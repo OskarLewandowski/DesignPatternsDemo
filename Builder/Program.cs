@@ -31,6 +31,29 @@ namespace Builder
                 Console.WriteLine(item);
             }
 
+            var builder2 = new InvoiceBuilder();
+
+            var invoice2 = builder2.SetDate(new DateTime(2022, 5, 4))
+                 .SetInvoiceNumber("202200002")
+                 .SetVendor("Google..")
+                 .SetVendee("BankABC")
+                 .SetLineItems(new List<string>()
+                 {
+                    "Line item11",
+                    "Line item22",
+                    "Line item33",
+                    "Line item44",
+                    "Line item55",
+                    "Line item66"
+                 })
+                 .Build();
+
+
+            Console.WriteLine(invoice2.Number);
+            foreach (var item in invoice2.LineItems)
+            {
+                Console.WriteLine(item);
+            }
 
             Console.ReadLine();
         }

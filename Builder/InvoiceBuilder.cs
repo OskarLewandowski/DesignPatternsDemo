@@ -15,34 +15,46 @@ namespace Builder
             return _invoice;
         }
 
-        public void SetVendor(string vendor)
+        public InvoiceBuilder SetVendor(string vendor)
         {
             _invoice.Vendor = vendor;
+
+            return this;
         }
 
-        public void SetVendee(string vendee)
+        public InvoiceBuilder SetVendee(string vendee)
         {
             _invoice.Vendee = vendee;
+
+            return this;
         }
 
-        public void SetNote(string note)
+        public InvoiceBuilder SetNote(string note)
         {
             _invoice.Note = note;
+
+            return this;
         }
 
-        public void SetLineItems(IEnumerable<string> lineItems)
+        public InvoiceBuilder SetLineItems(IEnumerable<string> lineItems)
         {
             _invoice.LineItems = lineItems;
+
+            return this;
         }
 
-        public void SetInvoiceNumber(string number)
+        public InvoiceBuilder SetInvoiceNumber(string number)
         {
             _invoice.Number = number;
+
+            return this;
         }
 
-        public void SetDate(DateTime date)
+        public InvoiceBuilder SetDate(DateTime date)
         {
             _invoice.Date = date;
+
+            return this;
         }
     }
 }
