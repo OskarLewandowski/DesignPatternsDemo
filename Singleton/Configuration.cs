@@ -9,6 +9,8 @@ namespace Singleton
     public class Configuration
     {
         private static Configuration _instance = null;
+        private static object _instanceLock = new object();
+
         public string StringProperty { get; set; }
         public int IntProperty { get; set; }
 
@@ -19,9 +21,12 @@ namespace Singleton
 
         public static Configuration GetInstance()
         {
-            if (_instance == null)
+            lock (_instanceLock)
             {
-                _instance = new Configuration();
+                if (_instance == null)
+                {
+                    _instance = new Configuration();
+                }
             }
 
             return _instance;
