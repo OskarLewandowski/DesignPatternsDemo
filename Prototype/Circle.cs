@@ -13,7 +13,17 @@ namespace Prototype
         public override Shape Clone()
         {
             //shallow clone
-            return (Circle)this.MemberwiseClone();
+            //return (Circle)this.MemberwiseClone();
+
+            //deep clone
+            Circle cloneBase = (Circle)this.MemberwiseClone();
+            cloneBase.Border = new Border()
+            {
+                Color = cloneBase.Border.Color,
+                Size = cloneBase.Border.Size
+            };
+
+            return cloneBase;
         }
 
         public override void Render()

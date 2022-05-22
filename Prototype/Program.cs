@@ -26,9 +26,6 @@ namespace Prototype
             bool borderReferenceEquals = ReferenceEquals(circle1.Border, circle2.Border);
             Console.WriteLine($"borderReferenceEquals: {borderReferenceEquals}");
 
-
-
-
             Console.ReadLine();
         }
     }
