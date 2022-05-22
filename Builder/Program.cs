@@ -7,6 +7,7 @@ namespace Builder
     {
         static void Main(string[] args)
         {
+            var displayInvoiceDetails = new InvoiceDetails();
             var builder = new InvoiceBuilder();
 
             builder.SetDate(new DateTime(2022, 5, 4));
@@ -24,15 +25,9 @@ namespace Builder
             });
 
             var invoice = builder.Build();
-
-            Console.WriteLine(invoice.Number);
-            foreach (var item in invoice.LineItems)
-            {
-                Console.WriteLine(item);
-            }
+            displayInvoiceDetails.Display(invoice);
 
             var builder2 = new InvoiceBuilder();
-
             var invoice2 = builder2.SetDate(new DateTime(2022, 5, 4))
                  .SetInvoiceNumber("202200002")
                  .SetVendor("Google..")
@@ -48,12 +43,16 @@ namespace Builder
                  })
                  .Build();
 
+            displayInvoiceDetails.Display(invoice2);
 
-            Console.WriteLine(invoice2.Number);
-            foreach (var item in invoice2.LineItems)
-            {
-                Console.WriteLine(item);
-            }
+            var director = new Director(builder2);
+
+            var monthlyInvoice = director.createMonthlyInvoice();
+            displayInvoiceDetails.Display(monthlyInvoice);
+
+            var blankInvoice = director.createBlankInvoice();
+            displayInvoiceDetails.Display(blankInvoice);
+
 
             Console.ReadLine();
         }
