@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChainOfResponsibility", "Ch
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateMethod", "TemplateMethod\TemplateMethod.csproj", "{FD8DB027-13A0-4935-AD93-822B95568015}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "State", "State\State.csproj", "{56374C5E-171D-4092-A7D3-FD6F98D87807}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{FD8DB027-13A0-4935-AD93-822B95568015}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD8DB027-13A0-4935-AD93-822B95568015}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD8DB027-13A0-4935-AD93-822B95568015}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56374C5E-171D-4092-A7D3-FD6F98D87807}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56374C5E-171D-4092-A7D3-FD6F98D87807}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56374C5E-171D-4092-A7D3-FD6F98D87807}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56374C5E-171D-4092-A7D3-FD6F98D87807}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
