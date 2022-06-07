@@ -1,4 +1,4 @@
-# DesignPatternsDemo
+# DesignPatternsDemo [My Learning]
 ### Example of use design patterns, concepts
 
 #### Creational design patterns:
